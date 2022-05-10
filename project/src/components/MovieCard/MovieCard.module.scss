@@ -1,0 +1,31 @@
+.carditem {
+    background: #1a242f;
+    cursor: pointer;
+    transition: all 0.3s;
+  
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s;
+    }
+  }
+  
+  .cardtop {
+    height: 300px;
+  
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .cardbottom {
+    padding: 20px;
+  }
+  .cardinfo {
+    color: #ffffff;
+    h4 {
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+  }
