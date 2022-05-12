@@ -1,0 +1,41 @@
+.moviesection {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.movierating {
+  padding-left: 3px;
+  margin-top: 20px;
+  color: #79b8f3;
+  display: flex;
+  span {
+    margin-right: 20px;
+  }
+}
+
+.movietitle {
+  font-size: 40px;
+  color: #ffffff;
+}
+.movieplot {
+  margin-top: 20px;
+  line-height: 1.8rem;
+}
+
+.movieinfo > div span:first-child {
+  padding: 10px 0px;
+  color: #ffffff;
+  font-weight: 600;
+  width: 100px;
+  display: inline-block;
+}
+
+.movieinfo > div span {
+  color: #79b8f3;
+}
+.sectionright {
+  margin-left: 30px;
+}

@@ -1,27 +1,19 @@
 import React, { useEffect } from 'react'
 import MovieListing from '../MovieListing/MovieListing'
 import style from './Home.module.scss'
-import movieApi from '../../common/apis/movieApi'
-import { APIKey } from '../../common/apis/movieApiKey'
 import { useDispatch } from 'react-redux'
-import { addMovies } from '../../features/movies/movieSlice'
+import { fetchAsyncMovies, fetchAsyncShows } from '../../features/movies/movieSlice'
 
 const Home = () => {
 
   const dispatch = useDispatch()
-  const movieText = "batman"
+  const movieText = "Justice League"
+  const showText = "Dark"
 
   useEffect(()=>{
-    const fetchMovies = async() => {
-      const response = await movieApi.get(`?apikey=${APIKey}&s=${movieText}&type=movie`)  
-      .catch((err)=>{
-        console.log(err)
-      });
-      console.log("The response is", response)
-      dispatch(addMovies(response.data))
-    }
-    fetchMovies()
-  },[])
+    dispatch(fetchAsyncMovies(movieText))
+    dispatch(fetchAsyncShows(showText))
+  },[dispatch])
   return (
     <div>
       <div className={style.banner}></div>
